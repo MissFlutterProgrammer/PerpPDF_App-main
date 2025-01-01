@@ -143,11 +143,12 @@ class _ProfilePageState extends State<ProfilePage> {
                                           child: GestureDetector(
                                             onTap: () {
                                               Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                    builder: (context) =>
-                                                        UserProfileEdit(),
-                                                  ));
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      const UserProfileEdit(),
+                                                ),
+                                              );
                                             },
                                             child: Text(
                                               "Edit",
@@ -169,9 +170,7 @@ class _ProfilePageState extends State<ProfilePage> {
                               ),
                             ),
                           ),
-                          const SizedBox(
-                            height: 25,
-                          ),
+                          const SizedBox(height: 25),
                           //mode section
                           Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -202,9 +201,10 @@ class _ProfilePageState extends State<ProfilePage> {
                                       value: Provider.of<ThemeProvider>(context)
                                           .isDarkMode,
                                       onChanged: (value) {
-                                        Provider.of<ThemeProvider>(context,
-                                                listen: false)
-                                            .toggleTheme();
+                                        Provider.of<ThemeProvider>(
+                                          context,
+                                          listen: false,
+                                        ).toggleTheme();
                                       },
                                       activeColor: Colors.blue,
                                     ),
@@ -213,9 +213,7 @@ class _ProfilePageState extends State<ProfilePage> {
                               ),
                             ),
                           ),
-                          const SizedBox(
-                            height: 25,
-                          ),
+                          const SizedBox(height: 25),
                           //about section
                           const aboutUs(),
                           const SizedBox(

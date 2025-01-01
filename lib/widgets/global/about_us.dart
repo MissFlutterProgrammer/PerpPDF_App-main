@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types
+
 import 'package:flutter/material.dart';
 
 class aboutUs extends StatelessWidget {
@@ -57,9 +59,7 @@ class aboutUs extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(
-                        height: 10,
-                      ),
+                      SizedBox(height: 10),
                       Padding(
                         padding: EdgeInsets.symmetric(
                           horizontal: 10,

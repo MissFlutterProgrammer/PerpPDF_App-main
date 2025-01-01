@@ -25,9 +25,9 @@ class _BottomNavBarState extends State<BottomNavBar> {
         : Colors.grey;
   }
 
-  List<Widget> _pages = [
-    HomePage(),
-    AnswerPage(),
+  final List<Widget> _pages = [
+    const HomePage(),
+    const AnswerPage(),
     const ProfilePage(),
   ];
 

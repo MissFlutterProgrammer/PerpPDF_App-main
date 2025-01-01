@@ -1,5 +1,6 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -69,12 +70,16 @@ class _ForgetPassPageState extends State<ForgetPassPage> {
                 ),
                 Padding(
                   padding: const EdgeInsets.fromLTRB(0, 0, 100, 0),
-                  child: Image.asset('assets/images/grad1.png'),
+                  child: Image.asset(
+                    'assets/images/grad1.png',
+                  ),
                 ),
                 Positioned(
                   top: 70,
                   left: 150,
-                  child: Image.asset('assets/images/intro_logo.png'),
+                  child: Image.asset(
+                    'assets/images/intro_logo.png',
+                  ),
                 ),
 
                 //container
@@ -112,9 +117,7 @@ class _ForgetPassPageState extends State<ForgetPassPage> {
                             ),
                             textAlign: TextAlign.center,
                           ),
-                          const SizedBox(
-                            height: 40,
-                          ),
+                          const SizedBox(height: 40),
                           //email textfield
                           Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -138,16 +141,14 @@ class _ForgetPassPageState extends State<ForgetPassPage> {
                                 ),
                                 labelText: " Email ",
                                 labelStyle: TextStyle(
-                                    color: Theme.of(context)
-                                        .colorScheme
-                                        .secondary),
+                                  color:
+                                      Theme.of(context).colorScheme.secondary,
+                                ),
                               ),
                             ),
                           ),
 
-                          const SizedBox(
-                            height: 40,
-                          ),
+                          const SizedBox(height: 40),
 
                           //login Button
                           Padding(

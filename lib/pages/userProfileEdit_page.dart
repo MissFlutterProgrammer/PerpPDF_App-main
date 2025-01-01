@@ -1,9 +1,13 @@
+// ignore_for_file: file_names, library_private_types_in_public_api
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class UserProfileEdit extends StatefulWidget {
+  const UserProfileEdit({super.key});
+
   @override
   _UserProfileEditState createState() => _UserProfileEditState();
 }
@@ -51,8 +55,10 @@ class _UserProfileEditState extends State<UserProfileEdit> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text('Confirm Update'),
-          content: Text('Are you sure you want to update your profile?'),
+          title: const Text('Confirm Update'),
+          content: const Text(
+            'Are you sure you want to update your profile?',
+          ),
           actions: <Widget>[
             TextButton(
               child: Text(
@@ -124,7 +130,7 @@ class _UserProfileEditState extends State<UserProfileEdit> {
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(12),
-                    borderSide: BorderSide(
+                    borderSide: const BorderSide(
                       color: Colors.deepPurple,
                     ),
                   ),
@@ -150,7 +156,7 @@ class _UserProfileEditState extends State<UserProfileEdit> {
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(12),
-                    borderSide: BorderSide(
+                    borderSide: const BorderSide(
                       color: Colors.deepPurple,
                     ),
                   ),
